@@ -101,8 +101,14 @@ body{
     color: white;
     cursor: pointer;
     transition: color 0.3s;
+    
 }
 
 .menu-vertical li:hover {
     color: black;
+}
+
+.menu-vertical a {
+    text-decoration: none;
+    color: inherit;
 }
