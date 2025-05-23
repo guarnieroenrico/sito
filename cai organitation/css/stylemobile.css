@@ -54,7 +54,7 @@ body{
 .hamburger {
     position: absolute;
     top: 25px;
-    left: 50%;
+    left: 90%;
     transform: translateX(-50%);
     font-size: 36px;
     color: white;
