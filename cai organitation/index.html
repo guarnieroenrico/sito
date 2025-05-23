@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cai Organitation</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        window.onload = function () {
-            if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                 window.location.href = "indexmobile.html";
-      } 
-    };
-    </script>
 </head>
 <body> 
        <div class="psz">
@@ -23,15 +16,16 @@
 
      <div class="menu-overlay" id="menuOverlay">
         <ul class="menu-vertical">
-            <li><a href="">About us</a></li>
-            <li><a href="attivita.html">Activity</a></li>
-            <li><a href="">Contacts</a></li>
+           <button onclick="window.location.href='about.html'">About us</button>
+            <button onclick="window.location.href='attivita.html'">Activity</button>
+            <button onclick="window.location.href='contacts.html'">Contacts</button>
         </ul>
     </div>
         <div class="prs">
             <h1 id="logoH">CAI PIEDIMONTE MATESE</h1>
                 <p id="logoP">vivi la montagna, passo dopo passo.</p>
-             <button id="interestBtn" class="interest-button">PUNTI DI INTERESSE</button>
+                 <button id="interestBtn" class="interest-button">PUNTI DI INTERESSE</button>
+              
         </div>
 
          <script>
@@ -45,13 +39,17 @@
         overlay.addEventListener("click", () => {
             overlay.classList.remove("open");
         });
-
-          
+        
+        const video = document.getElementById('vid');
+        video.playbackRate = 0.8;
+    
     </script>
 </div>
 <div class="psz2">
-      
+
+
 </div>
+
     
 </body>
 </html>
