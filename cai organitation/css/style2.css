@@ -8,7 +8,8 @@ body{
     height: 100vh;
     background-image: url('../img-vid/segnavia-1024x576.jpg');
     background-size: cover;
-
+    background-position: center;
+    overflow-x: hidden;
 }
 
 .logo{
@@ -67,100 +68,127 @@ body{
     margin: 0;
     text-align: center;
 }
-
-.menu-vertical li {
-    margin: 20px 0;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-    
+.menu-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
 }
 
-.menu-vertical li:hover {
-    color: black;
+.menu-vertical button {
+  width: 200px;
+  padding: 12px 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.menu-vertical a {
-    text-decoration: none;
-    color: inherit;
+.menu-vertical button:hover {
+  background-color: white;
+  
 }
 
 
 #logoH{
     width: 100vw;
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     padding: 0;
     margin: 0;
     letter-spacing: 8px;
     font-weight: 900;
-    padding-top: 15vh;
+    padding-top: 14vh;
     color: white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-  .cardatt {
-      position: relative;
-      width: 450px;
-      height: 300px;
-      background-image: url('../img-vid/monaci.jpg'); 
-      background-size: cover;
-      background-position: center;
-      border-radius: 50px;
-      overflow: hidden;
-      cursor: pointer;
-      margin-left: 38%;
-      margin-top: 70px;
-    }
-
-    .cardatt h1 {
-      position: absolute;
-      top: 50%;
-      left: 55%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2.5em;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      opacity: 0;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .cardatt:hover h1 {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+.pra{
+    width: 40vw;
+    height: 500px;
+    margin-top: 4%;
+    position: relative;
+    
+  
+    
+}
 
 
-     .cardattA {
-      position: relative;
-      width: 450px;
-      height: 300px;
-      background-image: url('../img-vid/valle.jpg'); 
-      background-size: cover;
-      background-position: center;
-      border-radius: 50px;
-      overflow: hidden;
-      cursor: pointer;
-      margin-left: 38%;
-      margin-top: 70px;
-    }
+.AC{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-image: url('../img-vid/monaci.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+}
 
-    .cardattA h1 {
-      position: absolute;
-      top: 50%;
-      left: 55%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2.5em;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      opacity: 0;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+.ACT{
+    width: 70vw;
+    height: 400px;
+    margin-left: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 
-    .cardattA:hover h1 {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+
+
+.ACT .TAC{
+    text-align: center;
+    padding-top: 130px;
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px black;
+    
+}
+
+
+.ACT .PAC{
+    text-align: center; 
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    
+}
+
+
+.ACB{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-image: url('../img-vid/valle.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-left: 2%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+}
+
+
+.ACC{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-image: url('../img-vid/san.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-left: 2%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+}
+
+
