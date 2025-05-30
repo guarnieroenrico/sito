@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     width: 100%;
     overflow-x: hidden;
+    background-image: url('../img-vid/WhatsApp\ Image\ 2025-05-30\ at\ 10.17.47.jpeg');
 }
 
 .logo {
@@ -135,6 +137,11 @@ body {
 
 .FC .text {
     width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .FS .text h3 {
@@ -146,6 +153,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
 }
+
 
 /* Per invertire ordine: testo sinistra, immagine destra */
 .FS.reverse {
@@ -169,28 +177,87 @@ body {
 
 
 .SA {
+    position: relative;
     width: 75%;
-    height: 400px;
+    height: auto;
+    min-height: 250px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.SA-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../img-vid/nseg.jpg');
     background-size: cover;
     background-position: center;
-    margin-left: 14%;
-   
-    
+    z-index: 0;
 }
 
-.SA p {
-   position: relative;
+.SAT {
+    position: relative;
     z-index: 1;
-    height: 100%;
-    padding: 30px;
+    padding: 40px 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.SAT-content {
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 25px;
     color: white;
-    font-size: 1.5em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.SAT-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
     text-align: center;
-    
+    letter-spacing: 1px;
+}
+
+.SAT-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.SZ {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.SZ h1 {
+    font-size: 2em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.SZ-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-text,
+.right-text {
+    width: 50%;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
 }
