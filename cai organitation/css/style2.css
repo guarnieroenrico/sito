@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.sfps {
+    width: 100vw;
+    height: 350px;
+    background-image: url('../img-vid/DSC_0112.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.sfps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.imglogo {
+    height: 60px;
+    width: auto;
+}
+
+
+.hamburger {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.283);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-vertical button {
+    width: 200px;
+    padding: 12px 24px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.menu-vertical button:hover {
+    background-color: white;
+
+}
+
+#logoH {
+    width: 100vw;
+    text-align: center;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 8px;
+    font-weight: 900;
+    padding-top: 5vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+
+.sfpss {
+    width: 100vw;
+    position: relative;
+    background-image: url('../img-vid/DSC_4728-Gen-Def-2021-x-fb-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.sfpss::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 15px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.card h2,
+.card p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+
+.activity-grid .card:nth-child(1) {
+    background-image: url('../img-vid/monaci.jpg');
+}
+
+.activity-grid .card:nth-child(2) {
+    background-image: url('../img-vid/valle.jpg');
+}
+
+.activity-grid .card:nth-child(3) {
+    background-image: url('../img-vid/san.jpg');
+}
+
+.activity-grid .card:nth-child(4) {
+    background-image: url('../img-vid/delvedere.jpg');
+}
+
+.activity-grid .card:nth-child(5) {
+    background-image: url('../img-vid/montemiletto.jpeg');
+}
+
+.activity-grid .card:nth-child(6) {
+    background-image: url('../img-vid/arco.jpg');
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        position: absolute; 
+        top: 20px;
+        left: 20px; 
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+       
+    }
+
+    .hamburger {
+        position: absolute; 
+        top: 20px;
+        right: 20px;
+        left: auto; /* Annulla il left: 50% */
+        transform: none; /* Annulla la trasformazione translateX */
+        display: block;
+        font-size: 30px;
+        /* Rimuovi padding-right se presente, right: 20px è sufficiente */
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    .imglogo {
+        height: 40px;
+    }
+
+    .activity-grid {
+        width: 95%;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem 1rem;
+        min-height: 280px;
+    }
+
+    .card h2 {
+        font-size: 2rem;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+    }
+
+    .menu-vertical button {
+        width: 90%;
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logoH {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .imglogo {
+        height: 35px;
+    }
+
+    .hamburger {
+        font-size: 28px;
+    }
+
+
+    .card {
+        min-height: 250px;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}
